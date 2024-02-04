@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+.scores {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.blocks-container-outer {
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    max-width: 430px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.blocks-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin-left: 10px;
+}
+.block {
+    height: 80px;
+    width: 80px;
+    background-color: #fcfcfc;
+    border: 1px solid lightgray;
+}
+.blinked-blue {
+    background-color: blue;
+}
+.blinked-red {
+    background-color: red;
+}
+.blinked-green {
+    background-color: green;
+}
+.shake {
+    animation: shake 0.8s infinite;
+    transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+    0% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-8px);}
+    20%, 40%, 60%, 80%,100% {transform: translateX(8px);}
+ }
+
+ .start-btn {
+    width: 80px;
+    height: 40px;
+    padding: 0px 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+ }
+
+ .start-btn:disabled {
+    background-color: whitesmoke;
+    color: darkgrey;
+    cursor:not-allowed
+ }
